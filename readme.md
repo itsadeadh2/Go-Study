@@ -48,8 +48,6 @@ To create a go.mod automatically, we can run the `go mod init` command.
 ### TODO:
 > Lookup how to manage different Go versions. I already know it is possible to do so, but I wonder if there is a tool like `n` that makes the process less tedious.
 
-> Should the `go.sum` file also be commited?
-
 > Get more info about how to run a specific file, also, how does go identifies which file to run by context with the `.`
 
 
