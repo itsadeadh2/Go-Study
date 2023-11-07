@@ -24,9 +24,14 @@ To create a go.mod automatically, we can run the `go mod init` command.
 - `go get <packagename>`
 	* We can also use the `go get <package name>` command to find and pull dependencies into a project. 
 
+ After running any of these commands, a `go.sum` file will be generated as well. This file is used to contain the checksum of the content of the specific modules versions.
+
+
 ### Running code
  - `go run .` to run based on context
  - `go run <filename>` to run specific file  
+
+
  
 
 ### Organize later:
