@@ -18,7 +18,7 @@ Installing go can be easily done by following the steps on the [website](https:/
 To manage the dependencies we use the go.mod file. This file should be included in the source code.  
 To create a go.mod automatically, we can run the `go mod init` command.
 
-##### Installing Modules
+**Installing Modules**
 - `go mod tidy`
 	* We can import the modules directly into the code and run `go mod tidy` afterwards to have go retrieve the package for us.
 - `go get <packagename>`
