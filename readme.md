@@ -75,6 +75,26 @@ To create a go.mod automatically, we can run the `go mod init <package><module>`
 
 > Get more info about how to run a specific file, also, how does go identifies which file to run by context with the `.`
 
+### Study Roadmap
+- [Go Docs](https://go.dev/doc/tutorial/)
+	* 🟢 [Getting started](https://go.dev/doc/tutorial/getting-started.html)
+	* 🟢 [Create a Module](https://go.dev/doc/tutorial/create-module.html)
+	* 🟡 [Getting started with multi-module workspaces](https://go.dev/doc/tutorial/workspaces.html)
+	* 🔴 [Accessing a relational database](https://go.dev/doc/tutorial/database-access)
+	* 🔴 [Developing RESTful API with Go and Gin](https://go.dev/doc/tutorial/web-service-gin)
+	* 🔴 [Getting started with generics](https://go.dev/doc/tutorial/generics)
+	* 🔴 [Getting started with fuzzing](https://go.dev/doc/tutorial/fuzz)
+	* 🔴 [Getting started with govulncheck](https://go.dev/doc/tutorial/govulncheck)
+	* 🔴 [Find and fix vulnerable dependencies with VS Code Go](https://go.dev/doc/tutorial/govulncheck-ide)
+	* 🔴 [A Tour of Go](https://go.dev/tour/)
+	* 🔴 [Managing Dependencies](https://go.dev/doc/modules/managing-dependencies)
+	* 🔴 [Developing and publishing modules](https://go.dev/doc/modules/developing)
+- Books
+	* 🔴 [The Go Programming Language](https://www.gopl.io/)
+	* 🔴 [Get Programming with Go](https://www.manning.com/books/get-programming-with-go)
+	* 🔴 [Go Programming Blueprints](https://github.com/matryer/goblueprints)
+	* 🔴 [Introducing Go](http://shop.oreilly.com/product/0636920046516.do)
+	* 🔴 [Concurrency in Go](https://www.oreilly.com/library/view/concurrency-in-go/9781491941294/)
 
   
 **ctrl shift v to preview**
