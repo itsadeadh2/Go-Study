@@ -16,7 +16,7 @@ Installing go can be easily done by following the steps on the [website](https:/
 
 ### Managing Modules
 To manage the dependencies we use the go.mod file. This file should be included in the source code.  
-To create a go.mod automatically, we can run the `go mod init` command.
+To create a go.mod automatically, we can run the `go mod init <package><module>` command.
 
 **Installing Modules**
 - `go mod tidy`
@@ -65,6 +65,10 @@ To create a go.mod automatically, we can run the `go mod init` command.
 		// names would now be ["Jean", "Jean"]
 		```
 - To create tests in python we use the `testing` module. We then define the functions to run the tests and pass a `pointer` of `*testing.T` as an argument for the function. We can then use `t.Fatalf` to raise exceptions when the conditions doesnt match. To run the tests we run the `go test` command.
+
+- The `go run` command, compiles and run programs on demand.Its useful for development when we are making frequent changes but it doesnt generate a binary executable. To do that we need to run the `go build` or the `go install` command. `go build` generates an executable that you can run on the command line or just by clicking on it. `go install` generates the executable inside the _go install_ path (run `$ go list -f '{{.Target}}'` to see the target install path for the given module). If we include this path on the `PATH` envvar we can then run the program by just calling it on a terminal. (To include the path on windows use `$env:PATH+=";path_to_append"`)
+
+- To manage the workspace we can use the [go work](https://github.com/golang/tools/blob/master/gopls/doc/workspace.md) tool. This is useful for when we work on multiple packages at the same time, it allows us to specify the directories (modules) that we want to be included into the workspace. Without it we may have issues with the editors to properly locate dependencies in each of the modules.
 
 ### TODO:
 > Lookup how to manage different Go versions. I already know it is possible to do so, but I wonder if there is a tool like `n` that makes the process less tedious.
