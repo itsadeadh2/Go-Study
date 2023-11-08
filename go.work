@@ -1,6 +1,8 @@
 go 1.21.3
 
 use (
-	./greetings
-	./hello
+	./projects/greetings
+	./projects/hello
+	./projects/workspace/example/hello
+	./projects/workspace/hello
 )

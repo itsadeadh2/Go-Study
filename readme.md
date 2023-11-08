@@ -81,6 +81,8 @@ To create a go.mod automatically, we can run the `go mod init <package><module>`
 
 - To manage the workspace we can use the [go work](https://github.com/golang/tools/blob/master/gopls/doc/workspace.md) tool. This is useful for when we work on multiple packages at the same time, it allows us to specify the directories (modules) that we want to be included into the workspace. Without it we may have issues with the editors to properly locate dependencies in each of the modules.
 
+- When using the workspace config, if we have a matching package locally go will actually look into the local package instead of the cached module downloaded with `go get`.
+
 ### Study Roadmap
 - [Go Docs](https://go.dev/doc/tutorial/)
 	* 🟢 [Getting started](https://go.dev/doc/tutorial/getting-started.html)
