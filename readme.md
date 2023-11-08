@@ -64,6 +64,7 @@ To create a go.mod automatically, we can run the `go mod init` command.
 		}
 		// names would now be ["Jean", "Jean"]
 		```
+- To create tests in python we use the `testing` module. We then define the functions to run the tests and pass a `pointer` of `*testing.T` as an argument for the function. We can then use `t.Fatalf` to raise exceptions when the conditions doesnt match. To run the tests we run the `go test` command.
 
 ### TODO:
 > Lookup how to manage different Go versions. I already know it is possible to do so, but I wonder if there is a tool like `n` that makes the process less tedious.

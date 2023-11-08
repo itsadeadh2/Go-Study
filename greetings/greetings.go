@@ -7,10 +7,10 @@ import (
 )
 
 func Hello(name string) (string, error) {
-	message := fmt.Sprintf(randomFormat(), name)
 	if name == "" {
 		return "", errors.New("empty name")
 	}
+	message := fmt.Sprintf(randomFormat(), name)
 	return message, nil
 }
 
