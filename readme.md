@@ -35,6 +35,7 @@ To create a go.mod automatically, we can run the `go mod init` command.
  
 
 ### Organize later:
+- The `:=` syntax declares and initializes a value at the same time. It also automatically determines the variable type based on the value being assigned. To initialize an empty variable we do `var variable <type>`
 - A module is a collection of packages that are release, versioned and distributed together. Modules may be downloaded directly from version control repositories or from module proxy servers.
 - The module `root directory`  is the directory that contains the go.mod file.
 - The `main module` is the module containing the directory where the go command is invoked
@@ -44,6 +45,25 @@ To create a go.mod automatically, we can run the `go mod init` command.
 - Go allows for return of multiple values
 - We can return an "error" object and check for its content to determine if a function call failed. Very similar to how we handle errors for callbacks in nodejs.
 - go comes with a log package out of the box. If nothing is specified, it automatically adds timestamps for each log. the `Fatal` method on the log module also stops the execution.
+- go has `slices` wich are arrays with dynamic sizes. To declare a slice we do the following `[]<type>{val1, val2, val3}`.
+- As a statically typed language, maps need to be defined indicating the types of the keys and also the values. The syntax for it is `map[<key type>]<value type>`.
+- To do for loops in a given array in go we need to use the `range` keywordk (much like `enumerate` in python). `range` will return the index and a **copy** of the current item of the iteration.
+	* Since the range keyword returns a **copy** of the item, we cant use the item to modify the array
+		```go
+		names := []string{"John", "Doe"}
+		for idx, value := range names {
+			value = "Jean" // even though we change the value in here, it doesnt modify the original array
+		}
+		// names would still be ["John", "Doe"]
+		```
+	* Instead, we should use the `index` returned by range to modify the array
+		```go
+		names := []string{"John", "Doe"}
+		for idx, value := range names {
+			names[idx] = "Jean" 
+		}
+		// names would now be ["Jean", "Jean"]
+		```
 
 ### TODO:
 > Lookup how to manage different Go versions. I already know it is possible to do so, but I wonder if there is a tool like `n` that makes the process less tedious.
