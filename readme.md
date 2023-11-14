@@ -83,6 +83,47 @@ To create a go.mod automatically, we can run the `go mod init <package><module>`
 
 - When using the workspace config, if we have a matching package locally go will actually look into the local package instead of the cached module downloaded with `go get`.
 
+- [Go SQL Drivers](https://github.com/golang/go/wiki/SQLDrivers)
+
+- The `defer` keyword is used to delay the execution of a function or a statement until the very end of the execution. It works on a LIFO (Last In First Out) order.
+	* Example:
+		```go
+		package main
+
+		import "fmt"
+
+		func main() {
+			defer fmt.Println("World")
+			defer fmt.Println("One")
+			defer fmt.Println("Two")
+			fmt.Println("Hello")
+		}
+		// Output:
+		// Hello
+		// Two
+		// One
+		// World
+		```
+	* Useful usage:
+		```go
+		// using defer to close db rows so that any resources it holds gets freed up when the function exits:
+		rows, err := db.Query("SELECT * FROM album WHERE artist = ?", name)
+		if err != nil {
+			return nil, fmt.Errorf("albumsByArtist %q: %v", name, err)
+		}
+		defer rows.Close()
+		for rows.Next() {
+			// populating logic
+		}
+		```
+- the `Rows.Scan` function copies the columns in the current row to the specified location. Scan takes a list of `pointers` to Go values, where the column values will be written.
+
+- Error handling for queries:
+	* The err given from the `rows.Scan` only catches errors related to the reading of the values (incorrect target type, mismatching number of properties to map)
+	* The err given from the `db.Query` only catches errors related to the query syntax
+	what happens when checking the err from db.Query?
+	* The err given from `rows.Err()` only catches errors related to the query itself (if the query failed at some point, this is where you'd get that info)
+
 ### Study Roadmap
 - [Go Docs](https://go.dev/doc/tutorial/)
 	* 🟢 [Getting started](https://go.dev/doc/tutorial/getting-started.html)

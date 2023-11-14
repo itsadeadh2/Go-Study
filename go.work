@@ -1,6 +1,7 @@
 go 1.21.3
 
 use (
+	./projects/data-access
 	./projects/greetings
 	./projects/hello
 	./projects/workspace/example/hello
