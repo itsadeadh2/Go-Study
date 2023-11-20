@@ -1,5 +1,6 @@
 ## Go Study
 *Compilation of info/projects that I'll be gathering during my go study.*
+> This document is currently being maintained on notion, I'll migrate it from time to time to keep this one up-to-date.
 
 ### TODO:
 > Lookup how to manage different Go versions. I already know it is possible to do so, but I wonder if there is a tool like `n` that makes the process less tedious.
